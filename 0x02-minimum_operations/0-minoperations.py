@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """Module that defines function minOperations
 """
 
