@@ -38,7 +38,9 @@ for line in sys.stdin:
     if line_num and line_num % 10 == 0:
         print_stats()
 
-    if re.search(log_reg, line):
+    log_legit = re.search(code_reg, line) or re.search(size_reg, line)
+
+    if log_legit or re.search(log_reg, line):
         line_num += 1
         file_size = re.search(size_reg + '$', line)
         code_end_pos = (file_size.endpos - len(file_size.group())) - 2
