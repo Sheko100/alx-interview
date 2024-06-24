@@ -49,5 +49,5 @@ for line in sys.stdin:
         if status_code in status_codes:
             status_codes[status_code] += 1
 
-if line_num and line_num % 10 != 0:
+if line_num == 0 or line_num % 10 != 0:
     print_stats()
