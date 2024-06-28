@@ -10,6 +10,7 @@ def validUTF8(data):
 
     try:
         string = bytes(data)
+        print(string >> 1)
     except ValueError:
         is_valid = False
 
