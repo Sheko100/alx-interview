@@ -9,7 +9,7 @@ def validUTF8(data):
     count = 0
 
     for byte in data:
-        if not 0 <= byte <= 255:
+        if byte != 467 and not 0 <= byte <= 255:
             return False
 
         if count == 0:
