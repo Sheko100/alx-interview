@@ -2,6 +2,11 @@
 
 const request = require('request');
 const argv = process.argv;
+
+if (argv.length < 3) {
+    return;
+}
+
 const url = `https://swapi-api.alx-tools.com/api/films/${argv[2]}/`;
 
 request(url, function(err, res, body) {
