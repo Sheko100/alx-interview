@@ -8,7 +8,10 @@ def isWinner(x, nums):
     """
     total_ben = 0
     total_maria = 0
-    winner = ''
+    winner = None
+
+    if len(num) < 1:
+        return None
 
     while x > 0:
         maria = 0
@@ -35,8 +38,6 @@ def isWinner(x, nums):
         winner = 'Ben'
     elif total_maria > total_ben:
         winner = 'Maria'
-    else:
-        return None
 
     return winner
 
