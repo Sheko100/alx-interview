@@ -11,7 +11,6 @@ def isWinner(x, nums):
     winner = ''
 
     while x > 0:
-        print("round:", x)
         maria = 0
         ben = 0
         maria_played = False
@@ -19,11 +18,9 @@ def isWinner(x, nums):
         for n in num_set:
             if is_prime(n):
                 if not maria_played:
-                    print('prine num for maria: ', n)
                     maria += 1
                     maria_played = True
                 else:
-                    print('prine num for ben: ', n)
                     ben += 1
                     maria_played = False
 
@@ -34,13 +31,12 @@ def isWinner(x, nums):
 
         x -= 1
 
-    print("total ben:", total_ben)
-    print("total maria:", total_maria)
-
     if total_ben > total_maria:
         winner = 'Ben'
     elif total_maria > total_ben:
         winner = 'Maria'
+    else:
+        return None
 
     return winner
 
