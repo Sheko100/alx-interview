@@ -10,9 +10,6 @@ def isWinner(x, nums):
     total_maria = 0
     winner = None
 
-    if len(nums) < 1:
-        return None
-
     while x > 0:
         maria = 0
         ben = 0
