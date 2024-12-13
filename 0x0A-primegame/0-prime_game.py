@@ -10,7 +10,7 @@ def isWinner(x, nums):
     total_maria = 0
     winner = None
 
-    if len(num) < 1:
+    if len(nums) < 1:
         return None
 
     while x > 0:
