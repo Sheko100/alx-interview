@@ -48,8 +48,8 @@ def queen_location(check_point, board_size):
     while row < board_size:
         col = check_point if row == 0 else new_check
         while col < board_size:
-            if col in used_col or (len(used_col) > 0
-                                   and isDiagonal(used_col, col)):
+            if col in used_col or (len(used_col) > 0 and
+                                   isDiagonal(used_col, col)):
                 col += 1
                 continue
             locations.append([row, col])
